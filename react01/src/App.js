@@ -18,13 +18,20 @@ function App() {
     메뉴변경( newMenu );
   }
 
+  function 거리순으로정렬하기(){
+    var newArray = [...맛집];
+    newArray = ['육부단', '쭈꾸미킹', '백돈', '홍익짬뽕'];
+    메뉴변경( newArray );
+  }
+
   return (
     <div className="App">
       <div className="black-nav">
         <div>우리 동네 맛집</div>
       </div>
 
-      <button onClick={ 메뉴바꾸기 }>버튼</button>
+      <button onClick={ 메뉴바꾸기 }>메뉴변경버튼</button>
+      <button onClick={ 거리순으로정렬하기 }>메뉴정렬버튼</button>
 
       <div className="list">
         <h3> { 맛집[0] } <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> {따봉} </h3>
