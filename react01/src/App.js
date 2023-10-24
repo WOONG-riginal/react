@@ -11,13 +11,20 @@ function App() {
   // 변수에 데이터 저장
   let posts = '가고 싶은 맛집';
 
+  // 함수 사용
+  function 메뉴바꾸기(){
+    var newMenu = [...맛집];
+    newMenu[0] = '오제제';
+    메뉴변경( newMenu );
+  }
+
   return (
     <div className="App">
       <div className="black-nav">
         <div>우리 동네 맛집</div>
       </div>
 
-      <button onClick={ ()=>{ 메뉴변경(['오제제', '육부단', '쭈꾸미킹', '홍익짬뽕']) }}>버튼</button>
+      <button onClick={ 메뉴바꾸기 }>버튼</button>
 
       <div className="list">
         <h3> { 맛집[0] } <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> {따봉} </h3>
