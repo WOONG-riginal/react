@@ -56,9 +56,21 @@ function App() {
         <p>짜장면, 짬뽕, 찹쌀탕수육</p>
         <hr/>
       </div>
+
+      <Modal/>
       
     </div>
   );
+}
+
+function Modal(){
+  return (
+    <div className="modal">
+      <h2>제목</h2>
+      <p>작성자</p>
+      <p>내용</p>
+    </div>
+  )
 }
 
 export default App;
