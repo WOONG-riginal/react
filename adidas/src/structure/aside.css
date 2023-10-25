@@ -1,0 +1,42 @@
+.aside{
+    background-color: #ede734;
+    padding: 40px 0;
+    padding: 4.166666666666667vh 0;
+    text-align: center;
+    color: #000;
+}
+.aside h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.aside h3{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.aside h4{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.aside h4:hover{
+    color: #bbb;
+}
+.aside h4:after{
+    width: 150px;
+    height: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #000;
+    left: 2px;top: 2px;
+}

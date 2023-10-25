@@ -1,0 +1,79 @@
+.homepage{
+    color: #fff;
+    padding-bottom: 70px;
+    padding-bottom: 9.114583333333333vh;
+}
+.homepage .main_img{
+    /* background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/koKR/Images/0623_HP_MH_EOSS_MS-d_tcm215-1033891.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 624px;
+    background-size: 100% 81.25vh;
+    height: 624px;
+    height: 81.25vh;
+    position: relative;
+}
+.homepage .main_img_text{
+    position: absolute;
+    left: 200px;
+    left: 14.03508771929825vw;
+    top: 150px;
+    top: 19.53125vh;
+    z-index: 90;
+    padding-top: 88px;
+    padding-top: 11.45833333333333vh;
+}
+.homepage .main_img_text h3{
+    font-size: 40px;
+    font-size: 5.208333333333333vh;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-bottom: 1.953125vh;
+}
+.homepage .main_img_text h4{
+    font-size: 18px;
+    font-size: 2.34375vh;
+}
+.homepage .main_img_text h5{
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+}
+.homepage .main_img_text h5:hover{
+    color: #999;
+}
+.homepage .main_img_text h5:nth-child(1){
+    position: relative;
+}
+.homepage .main_img_text h5:nth-child(1)::before{
+    content: "\f0a4";
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    left: -30px;top: 0;
+    animation: movemove 3s linear infinite;
+}
+@keyframes movemove{
+	100% {
+    	transform: rotateX(360deg);
+    }
+}
+.homepage .main_img_text h5:after{
+    width: 170px;
+    height: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #fff;
+    left: 2px;top: 2px;
+}

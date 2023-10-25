@@ -1,0 +1,55 @@
+.rainydays{
+    margin-top: 120px;
+    margin-top: 12.5vh;
+}
+.rainydays h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.rainydays h3{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.rainydays ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.rainydays li{
+    width: 280px;
+    height: 370px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.rainydays li:hover{
+    border: 1px solid #000;
+}
+.rainydays li div{
+    position: relative;
+}
+.rainydays li div img{
+    width: 100%;
+}
+.rainydays li:hover div p{
+    transform: translateY(-10px);
+}
+.rainydays li div p{
+    position: absolute;
+    bottom: 5px;
+    background: #fff;
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.rainydays li p{
+    color: #767677;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.rainydays li h5{
+    font-size: 14px;
+    margin: 15px 0 15px 5px;
+}

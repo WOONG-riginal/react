@@ -1,0 +1,497 @@
+@charset "utf-8";
+/* 뷰포트 기준크기 1425 x 768 */
+body{
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.w1440{
+    width: 1440px;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+/* 뷰포트 기준크기 1425 x 768 */
+header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* 상단 GNB 메뉴 */
+header nav{
+    width: 95%;
+    margin: 0 auto;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .gnb{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo img{
+    width: 60px;
+    margin-top: 22.185px;
+}
+header .gnb li a{
+    font-size: 14px;
+    font-size: 1.822916666666667vh;
+    letter-spacing: 0.14px;
+    font-weight: 700;
+}
+header .gnb li a span{
+    font-weight: 300;
+}
+header .util{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+header .util i{
+    font-size: 20px;
+    cursor: pointer;
+}
+header .gnb li a:hover,
+header .util i:hover{
+    color: #0051ba;
+}
+
+/* 콘텐츠 */
+/* 홈페이지 */
+.homepage{
+    color: #fff;
+    padding-bottom: 70px;
+    padding-bottom: 9.114583333333333vh;
+}
+.homepage .main_img{
+    background-image: url(https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/koKR/Images/0623_HP_MH_EOSS_MS-d_tcm215-1033891.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 624px;
+    background-size: 100% 81.25vh;
+    height: 624px;
+    height: 81.25vh;
+    position: relative;
+}
+.homepage .main_img_text{
+    position: absolute;
+    left: 200px;
+    left: 14.03508771929825vw;
+    top: 150px;
+    top: 19.53125vh;
+    z-index: 90;
+    padding-top: 88px;
+    padding-top: 11.45833333333333vh;
+}
+.homepage .main_img_text h3{
+    font-size: 40px;
+    font-size: 5.208333333333333vh;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-bottom: 1.953125vh;
+}
+.homepage .main_img_text h4{
+    font-size: 18px;
+    font-size: 2.34375vh;
+}
+.homepage .main_img_text h5{
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+}
+.homepage .main_img_text h5:hover{
+    color: #bbb;
+}
+.homepage .main_img_text h5:after{
+    width: 170px;
+    height: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #fff;
+    left: 2px;top: 2px;
+}
+
+/* 섹션 1 */
+.promos{
+    background-color: #fff;
+    padding: 12px;
+    padding: 0.8421052631578947vw 1.5625vh;
+}
+.promos ul{
+    display: flex;
+    justify-content: space-between;
+}
+.promos li{
+    width: 352.5px;
+    width: 24.73684210526316vw;
+    height: 587px;
+    margin-right: 10px;
+}
+.promos li video,
+.promos li img{
+    width: 100%;
+}
+.promos li h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+.promos li h4{
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.promos li h5{
+    width: 90px;
+    padding: 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.promos li h5:hover{
+    color: #fff;
+    background: #000;
+}
+
+
+/* 섹션 2 */
+.seasonOff{
+    margin-top: 120px;
+    margin-top: 12.5vh;
+}
+.seasonOff h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.seasonOff h3{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.seasonOff ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.seasonOff li{
+    width: 280px;
+    height: 370px;
+    height: 38.54166666666667vh;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.seasonOff li:hover{
+    border: 1px solid #000;
+}
+.seasonOff li div{
+    position: relative;
+}
+.seasonOff li div img{
+    width: 100%;
+}
+.seasonOff li div h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+.seasonOff li div h4:nth-child(2){
+    font-size: 16px;
+    position: absolute;
+    right: 10px;top: 10px;
+}
+.seasonOff li div h4:nth-child(3){
+    position: absolute;
+    bottom: 30px;
+    background: #fff;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.seasonOff li:hover h4:nth-child(3),
+.seasonOff li:hover div p{
+    transform: translateY(-10px);
+}
+.seasonOff li div p{
+    position: absolute;
+    bottom: 5px;
+    background: #fff;
+    width: 140px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.seasonOff li p{
+    color: #767677;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.seasonOff li div p .redPrice{
+    color: #e32b2b;
+}
+.seasonOff li h5{
+    font-size: 14px;
+    margin: 15px 0 15px 5px;
+}
+
+/* 섹션 3 */
+.rainydays{
+    margin-top: 120px;
+    margin-top: 12.5vh;
+}
+.rainydays h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.rainydays h3{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.rainydays ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.rainydays li{
+    width: 280px;
+    height: 370px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.rainydays li:hover{
+    border: 1px solid #000;
+}
+.rainydays li div{
+    position: relative;
+}
+.rainydays li div img{
+    width: 100%;
+}
+.rainydays li:hover div p{
+    transform: translateY(-10px);
+}
+.rainydays li div p{
+    position: absolute;
+    bottom: 5px;
+    color: #000;
+    background: #fff;
+    width: 75px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.rainydays li p{
+    color: #767677;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.rainydays li h5{
+    font-size: 14px;
+    margin: 15px 0 15px 5px;
+}
+
+
+/* 섹션 4 */
+.products{
+    background-color: #fff;
+    margin-top: 120px;
+    margin-top: 12.5vh;
+    padding: 12px;
+    padding: 0.8421052631578947vw 1.5625vh;
+}
+.products ul{
+    display: flex;
+    justify-content: space-between;
+}
+.products li{
+    width: 352.5px;
+    width: 24.73684210526316vw;
+    height: 587px;
+    margin-right: 10px;
+}
+.products li video,
+.products li img{
+    width: 100%;
+}
+.products li h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+.products li h4{
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.products li h5{
+    width: 90px;
+    padding: 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.products li h5:hover{
+    color: #fff;
+    background: #000;
+}
+
+/* 섹션 5 */
+.banner{
+    margin-top: 12.5vh;
+    background-color: #f5f5e5;
+    padding: 80px 0;
+    padding: 8.333333333333333vh 0;
+}
+.banner ul{
+    display: flex;
+    justify-content: space-between;
+}
+.banner li{
+    width: 48%;
+}
+.banner li h2{
+    font-size: 40px;
+    font-weight: 700;
+    height: 120px;
+    height: 12.5vh;
+}
+.banner li p{
+    margin-top: 4vh;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+/* 어사이드 */
+.aside{
+    background-color: #ede734;
+    padding: 40px 0;
+    padding: 4.166666666666667vh 0;
+    text-align: center;
+    color: #000;
+}
+.aside h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.aside h3{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.aside h4{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.aside h4:hover{
+    color: #bbb;
+}
+.aside h4:after{
+    width: 150px;
+    height: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #000;
+    left: 2px;top: 2px;
+}
+
+
+/* 푸터 */
+#footer{
+    line-height: 1.3334;
+    font-weight: 400;
+    background-color: #f5f5f7;
+    color: #000;
+    padding-top: 25px;
+    padding-top: 3.255208333333333vh;
+}
+#footer .footer_content{
+    padding: 0 22px;
+    padding: 0 1.543859649122807vw;
+}
+/* 네비게이션 */
+#footer .footer_content nav{
+    padding-top: 20px;
+    padding-top: 2.604166666666667vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#footer .footer_content nav h3{
+    font-family: 'Play';
+    font-weight: 700;
+    line-height: 16px;
+    line-height: 2.083333333333333vh;
+    margin-bottom: 30px;
+}
+#footer .footer_content nav ul li{
+    font-size: 14px;
+    margin-bottom: 9.6px;
+    margin-bottom: 1.25vh;
+}
+#footer .footer_content nav ul li:hover{
+    text-decoration: underline;
+}
+#footer .footer_content nav .sns li{
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/* 법적고지 */
+#legal{
+    margin: 0 auto;
+    padding: 30px 0 10px;
+    color: #86868b;
+}
+#legal h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#footer .copyright{
+    text-align: center;
+    color: #fff;
+    background-color: #282c31;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+}

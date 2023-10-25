@@ -1,0 +1,100 @@
+.sale{
+    margin-top: 50px;
+}
+.sale h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.sale h3{
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.sale ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.sale li{
+    width: 280px;
+    height: 370px;
+    height: 38.54166666666667vh;
+    margin-bottom: 50px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.sale li:hover{
+    border: 1px solid #000;
+}
+.sale li:first-child{
+    position: relative;
+}
+.sale li:first-child::after{
+    content: "\f0a4";
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    color: #000;
+    position: absolute;
+    left: -30px;top: 0;
+    animation: movemove 3s linear infinite;
+}
+@keyframes movemove{
+	100% {
+    	transform: rotateX(360deg);
+    }
+}
+.sale li div{
+    position: relative;
+}
+.sale li div img{
+    width: 100%;
+}
+.sale li div h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+.sale li div h4:nth-child(2){
+    font-size: 16px;
+    position: absolute;
+    right: 10px;top: 10px;
+}
+.sale li div h4:nth-child(3){
+    position: absolute;
+    bottom: 30px;
+    background: #fff;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.sale li:hover h4:nth-child(3),
+.sale li:hover div p{
+    transform: translateY(-10px);
+}
+.sale li div p{
+    position: absolute;
+    bottom: 5px;
+    background: #fff;
+    width: 140px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.sale li p{
+    color: #767677;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.sale li div p .redPrice{
+    color: #e32b2b;
+}
+.sale li h5{
+    font-size: 14px;
+    margin: 15px 0 15px 5px;
+}

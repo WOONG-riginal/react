@@ -1,0 +1,42 @@
+.promos{
+    background-color: #fff;
+    padding: 12px;
+    padding: 0.8421052631578947vw 1.5625vh;
+}
+.promos ul{
+    display: flex;
+    justify-content: space-between;
+}
+.promos li{
+    width: 352.5px;
+    width: 24.73684210526316vw;
+    height: 587px;
+    /* height: 76.43229166666667vh; */
+    margin-right: 10px;
+}
+.promos li video,
+.promos li img{
+    width: 100%;
+}
+.promos li h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+.promos li h4{
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.promos li h5{
+    width: 90px;
+    padding: 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.promos li h5:hover{
+    color: #fff;
+    background: #000;
+}

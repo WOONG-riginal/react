@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* 뷰포트 기준크기 1425 x 768 */
+body{
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.w1440{
+    width: 1440px;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+/* 뷰포트 기준크기 1425 x 768 */
+header{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* 상단 GNB 메뉴 */
+header nav{
+    width: 95%;
+    margin: 0 auto;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+header .gnb{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo img{
+    width: 60px;
+    margin-top: 22.185px;
+}
+header .gnb li a{
+    font-size: 14px;
+    font-size: 1.822916666666667vh;
+    letter-spacing: 0.14px;
+    font-weight: 700;
+}
+header .gnb li a span{
+    font-weight: 300;
+}
+header .util{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+header .util i{
+    font-size: 20px;
+    cursor: pointer;
+}
+header .gnb li a:hover,
+header .util i:hover{
+    color: #0051ba;
+}
+
+
+.sale{
+    margin-top: 50px;
+}
+.sale h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.sale h3{
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.sale ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.sale li{
+    width: 280px;
+    height: 370px;
+    height: 38.54166666666667vh;
+    margin-bottom: 50px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.sale li:hover{
+    border: 1px solid #000;
+}
+.sale li div{
+    position: relative;
+}
+.sale li div img{
+    width: 100%;
+}
+.sale li div h4{
+    font-size: 14px;
+    font-weight: 600;
+}
+.sale li div h4:nth-child(2){
+    font-size: 16px;
+    position: absolute;
+    right: 10px;top: 10px;
+}
+.sale li div h4:nth-child(3){
+    position: absolute;
+    bottom: 30px;
+    background: #fff;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.sale li:hover h4:nth-child(3),
+.sale li:hover div p{
+    transform: translateY(-10px);
+}
+.sale li div p{
+    position: absolute;
+    bottom: 5px;
+    background: #fff;
+    width: 140px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.sale li p{
+    color: #767677;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.sale li div p .redPrice{
+    color: #e32b2b;
+}
+.sale li h5{
+    font-size: 14px;
+    margin: 15px 0 15px 5px;
+}
+
+
+.item_detail{
+    display: flex;
+    margin-bottom: 100px;
+}
+.item_detail nav{
+    width: 75%;
+    position: relative;
+}
+.item_detail nav span{
+    writing-mode: vertical-rl;
+    display: block;
+    padding: 4px 8px;
+    background: #fff;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 2%;top: 2%;
+    cursor: default;
+}
+.item_detail nav ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.item_detail ul li{
+    width: 50%;
+}
+.item_detail ul img{
+    width: 100%;
+    border: 1px solid #fff;
+}
+.item_detail .info{
+    padding: 30px;
+}
+.item_detail h2{
+    font-size: 16px;
+}
+.item_detail h3{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+.item_detail p{
+    background: #fff;
+    color: #767677;
+    font-size: 16px;
+}
+.item_detail p .redPrice{
+    color: #e32b2b;
+    font-weight: 700;
+}
+.item_detail .info_color{
+    margin: 40px 0;
+}
+.item_detail h4{
+    font-weight: 700;
+}
+.item_detail div ul{
+    display: flex;
+    width: 350px;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0 40px;
+}
+.item_detail div ul li{
+    width: 20%;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.item_detail div ul li:nth-child(2){
+    border-right: none;
+    border-left: none;
+}
+.item_detail h5{
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+}
+.item_detail h5:hover{
+    color: #bbb;
+}
+.item_detail h5:after{
+    width: 240px;
+    height: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #000;
+    left: 2px;top: 2px;
+}
+.item_detail dl{
+    margin-top: 40px;
+}
+.item_detail dl li{
+    margin-bottom: 15px;
+}
+
+
+
+/* 어사이드 */
+.aside{
+    background-color: #ede734;
+    padding: 40px 0;
+    padding: 4.166666666666667vh 0;
+    text-align: center;
+    color: #000;
+}
+.aside h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.aside h3{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.aside h4{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.aside h4:hover{
+    color: #bbb;
+}
+.aside h4:after{
+    width: 150px;
+    height: 50px;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #000;
+    left: 2px;top: 2px;
+}
+
+
+/* 푸터 */
+#footer{
+    line-height: 1.3334;
+    font-weight: 400;
+    background-color: #f5f5f7;
+    color: #000;
+    padding-top: 25px;
+    padding-top: 3.255208333333333vh;
+}
+#footer .footer_content{
+    padding: 0 22px;
+    padding: 0 1.543859649122807vw;
+}
+/* 네비게이션 */
+#footer .footer_content nav{
+    padding-top: 20px;
+    padding-top: 2.604166666666667vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#footer .footer_content nav h3{
+    font-family: 'Play';
+    font-weight: 700;
+    line-height: 16px;
+    line-height: 2.083333333333333vh;
+    margin-bottom: 30px;
+}
+#footer .footer_content nav ul li{
+    font-size: 14px;
+    margin-bottom: 9.6px;
+    margin-bottom: 1.25vh;
+}
+#footer .footer_content nav ul li:hover{
+    text-decoration: underline;
+}
+#footer .footer_content nav .sns li{
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+/* 법적고지 */
+#legal{
+    margin: 0 auto;
+    padding: 30px 0 10px;
+    color: #86868b;
+}
+#legal h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#footer .copyright{
+    text-align: center;
+    color: #fff;
+    background-color: #282c31;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+}

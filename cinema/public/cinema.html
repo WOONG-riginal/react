@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CINEMA</title>
+    <link rel="shortcut icon" href="./images/favicon32.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 기본 CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/cinema.css">
+    <!-- JS 플러그인 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        <header>
+            <div class="w1200">
+                <nav>
+                    <ul>
+                        <input type="checkbox" id="menuicon">
+                        <label for="menuicon" class="ham">
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <li>영화</li>
+                        <li>예매</li>
+                        <li>극장</li>
+                    </ul>
+                </nav>
+                <h1 class="logo"><a href="/"><img src="./images/c54f67eb87181a3e6b628d4865307b65.jpg" alt="로고"></a></h1>
+                <nav>
+                    <ul>
+                        <li>이벤트</li>
+                        <li>스토어</li>
+                        <li>혜택</li>
+                        <li><i class="fa fa-user" aria-hidden="true"></i></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="movies w1200">
+            <ul>
+                <li class="movie">
+                    <div class="pic">
+                        <img src="영화이미지" alt="이미지설명">
+                    </div>
+                    <div class="info">
+                        <h2>제목</h2>
+                        <h2>연도</h2>
+                        <h2>장르</h2>
+                    </div>
+                    <div class="detail">
+                        <h3>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ea pariatur maiores sint facere explicabo iure, quidem sapiente. Veniam aspernatur sunt autem aliquid placeat porro distinctio praesentium voluptates repellendus at?
+                        </h3>
+                        <h4>관람평 : <span>평점</span></h4>
+                    </div>
+                    <div class="curtain"></div>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>
+                COPYRIGHT &copy; EGGMONEYNA, Portfolio. All rights reserved | 
+                reference of <em>https://yts-proxy.now.sh/list_movies.json</em>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "utf-8";
+body{
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.w1440{
+    width: 1440px;
+    width: 75vw;
+    margin: 0 auto;
+}
