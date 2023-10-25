@@ -67,8 +67,8 @@ function Weather() {
     // then = fetch가 이루어지면 실행되는 함수로 => async와 await을 통해 데이터를 받을 수 있음.
     // https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&appid=81f458812bf2ce501b166301fae5f46a 
     // => ?q=Seoul로 변경후 주소창 확인해 볼것
-    // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${areaValue}&units=metric&appid=cc2f3c97f80d9cd216c70602a5b38378`, init)
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${areaValue}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
+    // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${areaValue}&units=metric&appid=cc2f3c97f80d9cd216c70602a5b38378`, init)
     .then(async response => {
       try {
         // async와 await은 비동기 함수로, 결과 값을 받을때 까지 기다렸다가 받으면 실행.
@@ -163,7 +163,7 @@ function Weather() {
   return (
     <section>
       <div className='weather'></div>
-      <h6>지역검색</h6>
+      <h6>지역 변경</h6>
       <div className='formBox'>
 {/* 
   React 에서의 this = 자바스크립트와 동작방식 같음 (객체지항에서는 객체자체를 의미)
