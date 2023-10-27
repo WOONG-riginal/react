@@ -1,4 +1,60 @@
-.app-container {
+@import 'reset.css';
+
+body {
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar 
+{ 
+    display: none;
+} 
+
+.root-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Header */
+.header-container {
+    background-color: rgba(3, 37, 65, 1);
+}
+
+.header-wrap {
+    height: 64px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-left-wrap {
+    display: flex;
+}
+
+.header-left-wrap ul {
+    display: flex;
+    margin-left: 16px;
+}
+
+.header-left-wrap li {
+    margin-right: 14px;
+    padding: 8px;
+}
+
+.header-nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-container {
+    max-width: 1400PX;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.movies-container {
     width: 80%;
     margin: 0 auto;
     display: flex;

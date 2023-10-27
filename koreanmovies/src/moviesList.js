@@ -364,23 +364,24 @@ export const list = {
     },
     {
       "adult": false,
-      "backdrop_path": "/5d1sQtAKsbVjdUuzXWoh2vKtyy7.jpg",
+      "backdrop_path": "/qZOuoBoKCDLSm1EvYz2eBub8Cto.jpg",
       "genre_ids": [
-        28,
-        18,
-        35
+        16,
+        12,
+        14,
+        10751
       ],
-      "id": 897160,
-      "original_language": "ko",
-      "original_title": "용감한 시민",
-      "overview": "불의는 못 본 척, 성질은 없는 척, 주먹은 약한 척 먹고 살기 위해 조용히 살아 온 기간제 교사 소시민. 법도 경찰도 무서울 것 하나 없는 안하무인 절대권력 한수강의 선을 넘는 행동을 목격하게 된다. 그의 계속되는 악행을 도저히 참을 수 없었던 그녀, 정체를 숨긴 채 통쾌한 한 방을 날리기로 마음 먹는데…",
-      "popularity": 44.784,
-      "poster_path": "/tc36Keiizp1mRkhKPNq6tcjCDUg.jpg",
-      "release_date": "2023-10-25",
-      "title": "용감한 시민",
+      "id": 939338,
+      "original_language": "fr",
+      "original_title": "Pattie et la colère de Poséidon",
+      "overview": "평화로운 항구 도시의 꼬마 생쥐 ‘패티’는 전설 속 아르고 원정대처럼 위대한 모험을 하고 영웅이 되는 꿈을 꾼다. 하지만 겁 많은 딸 바라기 아빠 고양이 ‘샘’은 자꾸 위험한 바깥세상으로 나가려 하는 ‘패티’가 걱정스럽다. 어느 날, 질투 많은 바다의 신 ‘포세이돈’이 멋진 삼지창을 든 자신의 동상을 세우라 명령하고, ‘패티’는 위기에 처한 도시를 살리기 위해 전설의 아르고 원정대를 부활시켜 모험을 떠난다. 걱정 많은 ‘샘’도 어쩔 수 없이 모험에 동참하는데…",
+      "popularity": 75.341,
+      "poster_path": "/crgWtan0cslODPqfYe9X4hqeYhT.jpg",
+      "release_date": "2023-09-21",
+      "title": "아르고 원정대: 꼬마 영웅 패티의 대모험",
       "video": false,
-      "vote_average": 0,
-      "vote_count": 0
+      "vote_average": 7,
+      "vote_count": 45
     },
     {
       "adult": false,
