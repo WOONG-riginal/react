@@ -1,2 +1,0 @@
-'영화목록 https://api.themoviedb.org/3/movie/now_playing?api_key=7a14af6465544bb4abe27c2aeada74d1&language=ko&page=1&region=kr'
-'장르분류 https://api.themoviedb.org/3/genre/movie/list?api_key=7a14af6465544bb4abe27c2aeada74d1&language=ko'
