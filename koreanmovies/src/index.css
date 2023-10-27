@@ -1,0 +1,33 @@
+.app-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-container {
+    width: 250px;
+    margin: 16px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.movie-container img {
+    max-width: 100%;
+}
+
+.movie-info {
+    padding: 16px;
+}
+
+.movie-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.movie-info p {
+    margin-top: 8px;
+    font-size: 14px;
+}
