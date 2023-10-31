@@ -9,9 +9,9 @@ export const list = {
       "adult": false,
       "backdrop_path": "/rMvPXy8PUjj1o8o1pzgQbdNCsvj.jpg",
       "genre_ids": [
-        28,
-        12,
-        53
+        "액션",
+        "모험",
+        "스릴러"
       ],
       "id": 299054,
       "original_language": "en",
@@ -29,7 +29,7 @@ export const list = {
       "adult": false,
       "backdrop_path": "/azD31DjpV3PJfjF3h72LVw2WCSD.jpg",
       "genre_ids": [
-        27
+        "공포"
       ],
       "id": 807172,
       "original_language": "en",
@@ -47,9 +47,9 @@ export const list = {
       "adult": false,
       "backdrop_path": "/mRGmNnh6pBAGGp6fMBMwI8iTBUO.jpg",
       "genre_ids": [
-        27,
-        9648,
-        53
+        "공포",
+        "미스테리",
+        "스릴러"
       ],
       "id": 968051,
       "original_language": "en",
@@ -65,32 +65,33 @@ export const list = {
     },
     {
       "adult": false,
-      "backdrop_path": "/r7DuyYJ0N3cD8bRKsR5Ygq2P7oa.jpg",
+      "backdrop_path": "/a0GM57AnJtNi7lMOCamniiyV10W.jpg",
       "genre_ids": [
-        12,
-        28,
-        18
+        "애니메이션",
+        "모험",
+        "판타지",
+        "드라마"
       ],
-      "id": 980489,
-      "original_language": "en",
-      "original_title": "Gran Turismo",
-      "overview": "레이싱 게임 ‘그란 투리스모’의 덕후 ‘잔 마든보로’ 스피드라고는 게임으로만 만족해야 했던 그에게 레이싱 선수 발굴을 목표로 만들어진 ‘그란 투리스모 콘테스트’라는 기회가 찾아온다. 앉아서 게임만 하던 그의 앞에 닥친 혹독한 훈련과 치열한 경쟁.뛰어난 잠재력을 입증해 프로 레이싱 팀에 합류하는데 성공하지만 상대팀 선수들은 게이머 출신인 그를 인정하지 않고, 프로 레이싱의 세계는 그를 더욱 거칠게 몰아붙이는데...  리셋 버튼 없는 목숨을 건 실전! 게이머에서 레이서가 된 소년의 흥미로운 스토리가 스크린에서 펼쳐진다!",
-      "popularity": 733.068,
-      "poster_path": "/mewjjhpju5JT1wDFJDMdctWcCqd.jpg",
-      "release_date": "2023-09-20",
-      "title": "그란 투리스모",
+      "id": 508883,
+      "original_language": "ja",
+      "original_title": "君たちはどう生きるか",
+      "overview": "화재로 어머니를 잃은 11살 소년 ‘마히토’는 아버지와 함께 어머니의 고향으로 간다. 어머니에 대한 그리움과 새로운 보금자리에 적응하느라 힘들어하던 ‘마히토’ 앞에 정체를 알 수 없는 왜가리 한 마리가 나타나고, 저택에서 일하는 일곱 할멈으로부터 왜가리가 살고 있는 탑에 대한 신비로운 이야기를 듣게 된다. 그러던 어느 날, ‘마히토’는 사라져버린 새엄마 ‘나츠코’를 찾기 위해 탑으로 들어가고, 왜가리가 안내하는 대로 이세계(異世界)의 문을 통과하는데…!",
+      "popularity": 111.567,
+      "poster_path": "/xPeFyVf2tRqwy0402EU7cSa6aDm.jpg",
+      "release_date": "2023-10-25",
+      "title": "그대들은 어떻게 살 것인가",
       "video": false,
-      "vote_average": 8.1,
-      "vote_count": 1174
+      "vote_average": 7.8,
+      "vote_count": 26
     },
     {
       "adult": false,
       "backdrop_path": "/gIchV01EUHd1zNBeql92L63kmHU.jpg",
       "genre_ids": [
-        16,
-        10751,
-        28,
-        878
+        "애니메이션",
+        "가족",
+        "액션",
+        "SF"
       ],
       "id": 893723,
       "original_language": "en",
@@ -108,8 +109,8 @@ export const list = {
       "adult": false,
       "backdrop_path": "/iIvQnZyzgx9TkbrOgcXx0p7aLiq.jpg",
       "genre_ids": [
-        27,
-        53
+        "공포",
+        "스릴러"
       ],
       "id": 1008042,
       "original_language": "en",
@@ -127,9 +128,9 @@ export const list = {
       "adult": false,
       "backdrop_path": "/uvsL5Q5Juf8ivqBnlr4nFVUwVoa.jpg",
       "genre_ids": [
-        80,
-        18,
-        53
+        "범죄",
+        "드라마",
+        "스릴러"
       ],
       "id": 466420,
       "original_language": "en",
@@ -147,8 +148,8 @@ export const list = {
       "adult": false,
       "backdrop_path": "/c6Splshb8lb2Q9OvUfhpqXl7uP0.jpg",
       "genre_ids": [
-        28,
-        53
+        "액션",
+        "스릴러"
       ],
       "id": 717930,
       "original_language": "en",
@@ -166,8 +167,8 @@ export const list = {
       "adult": false,
       "backdrop_path": "/pBdQ4iorzRV2G38mdS6rzrmUfMA.jpg",
       "genre_ids": [
-        28,
-        10752
+        "액션",
+        "전쟁"
       ],
       "id": 840326,
       "original_language": "fi",
@@ -185,10 +186,10 @@ export const list = {
       "adult": false,
       "backdrop_path": "/A3m5GJu5kzAKK2wkGlzErlCCElT.jpg",
       "genre_ids": [
-        16,
-        12,
-        28,
-        14
+        "애니메이션",
+        "모험",
+        "액션",
+        "판타지"
       ],
       "id": 900667,
       "original_language": "ja",
@@ -206,9 +207,9 @@ export const list = {
       "adult": false,
       "backdrop_path": "/w2nFc2Rsm93PDkvjY4LTn17ePO0.jpg",
       "genre_ids": [
-        16,
-        35,
-        28
+        "애니메이션",
+        "코미디",
+        "액션"
       ],
       "id": 614930,
       "original_language": "en",
@@ -226,9 +227,9 @@ export const list = {
       "adult": false,
       "backdrop_path": "/2zzaJ9jzyK1Am8XoS0dFjmP8V0L.jpg",
       "genre_ids": [
-        28,
-        53,
-        27
+        "액션",
+        "스릴러",
+        "공포"
       ],
       "id": 1135229,
       "original_language": "en",
@@ -246,10 +247,10 @@ export const list = {
       "adult": false,
       "backdrop_path": "/vT17lPUglrAzjEqMwjPpIDe49ty.jpg",
       "genre_ids": [
-        16,
-        12,
-        10751,
-        14
+        "애니메이션",
+        "모험",
+        "가족",
+        "판타지"
       ],
       "id": 459003,
       "original_language": "uk",
@@ -267,9 +268,9 @@ export const list = {
       "adult": false,
       "backdrop_path": "/iQcCAm8hKWZyUntqrvzyEGtXyJl.jpg",
       "genre_ids": [
-        878,
-        28,
-        53
+        "SF",
+        "액션",
+        "스릴러"
       ],
       "id": 670292,
       "original_language": "en",
@@ -287,10 +288,10 @@ export const list = {
       "adult": false,
       "backdrop_path": "/8FhKnPpql374qyyHAkZDld93IUw.jpg",
       "genre_ids": [
-        28,
-        9648,
-        53,
-        878
+        "액션",
+        "미스테리",
+        "스릴러",
+        "SF"
       ],
       "id": 536437,
       "original_language": "en",
@@ -306,31 +307,30 @@ export const list = {
     },
     {
       "adult": false,
-      "backdrop_path": "/a0GM57AnJtNi7lMOCamniiyV10W.jpg",
+      "backdrop_path": "/r7DuyYJ0N3cD8bRKsR5Ygq2P7oa.jpg",
       "genre_ids": [
-        16,
-        12,
-        14,
-        18
+        "모험",
+        "액션",
+        "드라마"
       ],
-      "id": 508883,
-      "original_language": "ja",
-      "original_title": "君たちはどう生きるか",
-      "overview": "화재로 어머니를 잃은 11살 소년 ‘마히토’는 아버지와 함께 어머니의 고향으로 간다. 어머니에 대한 그리움과 새로운 보금자리에 적응하느라 힘들어하던 ‘마히토’ 앞에 정체를 알 수 없는 왜가리 한 마리가 나타나고, 저택에서 일하는 일곱 할멈으로부터 왜가리가 살고 있는 탑에 대한 신비로운 이야기를 듣게 된다. 그러던 어느 날, ‘마히토’는 사라져버린 새엄마 ‘나츠코’를 찾기 위해 탑으로 들어가고, 왜가리가 안내하는 대로 이세계(異世界)의 문을 통과하는데…!",
-      "popularity": 111.567,
-      "poster_path": "/xPeFyVf2tRqwy0402EU7cSa6aDm.jpg",
-      "release_date": "2023-10-25",
-      "title": "그대들은 어떻게 살 것인가",
+      "id": 980489,
+      "original_language": "en",
+      "original_title": "Gran Turismo",
+      "overview": "레이싱 게임 ‘그란 투리스모’의 덕후 ‘잔 마든보로’ 스피드라고는 게임으로만 만족해야 했던 그에게 레이싱 선수 발굴을 목표로 만들어진 ‘그란 투리스모 콘테스트’라는 기회가 찾아온다. 앉아서 게임만 하던 그의 앞에 닥친 혹독한 훈련과 치열한 경쟁.뛰어난 잠재력을 입증해 프로 레이싱 팀에 합류하는데 성공하지만 상대팀 선수들은 게이머 출신인 그를 인정하지 않고, 프로 레이싱의 세계는 그를 더욱 거칠게 몰아붙이는데...  리셋 버튼 없는 목숨을 건 실전! 게이머에서 레이서가 된 소년의 흥미로운 스토리가 스크린에서 펼쳐진다!",
+      "popularity": 733.068,
+      "poster_path": "/mewjjhpju5JT1wDFJDMdctWcCqd.jpg",
+      "release_date": "2023-09-20",
+      "title": "그란 투리스모",
       "video": false,
-      "vote_average": 7.8,
-      "vote_count": 26
+      "vote_average": 8.1,
+      "vote_count": 1174
     },
     {
       "adult": false,
       "backdrop_path": "/47nv1UXkSDvpBlEv3BiAss9TxIX.jpg",
       "genre_ids": [
-        80,
-        53
+        "범죄",
+        "스릴러"
       ],
       "id": 800158,
       "original_language": "en",
@@ -348,7 +348,7 @@ export const list = {
       "adult": false,
       "backdrop_path": "/nYDPmxvl0if5vHBBp7pDYGkTFc7.jpg",
       "genre_ids": [
-        27
+        "공포"
       ],
       "id": 709631,
       "original_language": "en",
@@ -366,10 +366,10 @@ export const list = {
       "adult": false,
       "backdrop_path": "/qZOuoBoKCDLSm1EvYz2eBub8Cto.jpg",
       "genre_ids": [
-        16,
-        12,
-        14,
-        10751
+        "애니메이션",
+        "모험",
+        "판타지",
+        "가족"
       ],
       "id": 939338,
       "original_language": "fr",
@@ -387,8 +387,8 @@ export const list = {
       "adult": false,
       "backdrop_path": "/eiIvFiqOClwNX3nUmRlEmNarFCk.jpg",
       "genre_ids": [
-        10749,
-        35
+        "로맨스",
+        "코미디"
       ],
       "id": 1001811,
       "original_language": "en",

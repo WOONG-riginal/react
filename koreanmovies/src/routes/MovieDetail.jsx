@@ -7,20 +7,32 @@ export default function MovieDetail() {
   const { state } = useLocation();
 
   return (
-    <div className='page-container'>
-        <div style={{display: 'flex'}}>
-            <img 
-                style={{width: "300px", height: "450px"}}
-                src={IMG_BASE_URL + state.poster_path} 
-                alt={title}
-            />
-            <div>
-                <div style={{fontSize: "32px"}}>{title}</div>
-                <div>{state.release_date}</div>
-                <div>{state.overview}</div>
-                <div>평점 : {state.vote_average}</div>
-            </div>
+    <div className='detail-container' 
+          style={{display: 'flex', backgroundImage: 'url(' + IMG_BASE_URL + `${state.backdrop_path})`}}>
+        <div className='info-container'>
+          <img 
+              style={{width: "300px", height: "450px"}}
+              src={IMG_BASE_URL + state.poster_path} 
+              alt={title}
+          />
+          <div className='detail-info'>
+              <h2>{title}</h2>
+              <p>
+                {state.release_date} /
+                {state.genres.map((genre, i, num)=>{
+                  if(i+1 === num.length){
+                    return <span> {genre} </span>
+                  }else{
+                    return <span> {genre}, </span>
+                  }
+                })}
+              </p>
+              <h3>개요</h3>
+              <p>{state.overview}</p>
+              <p>평점 : <span className='red-point'>{state.vote_average}</span></p>
+          </div>
         </div>
+        <div class="curtain"></div>
     </div>
   )
 }

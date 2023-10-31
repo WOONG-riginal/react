@@ -15,6 +15,7 @@ export default function Movies() {
               backdrop_path={item.backdrop_path}
               overview={item.overview}
               vote_average={item.vote_average}
+              genres={item.genre_ids}
             />
           )
         })}

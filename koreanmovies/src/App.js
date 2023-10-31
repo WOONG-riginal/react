@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./routes/Home";
 import Movies from "./routes/Movies";
@@ -10,7 +10,7 @@ import MovieDetail from "./routes/MovieDetail";
 function App() {
   return (
     <div className="root-wrap">
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ function App() {
           <Route path="/person" element={<Celebrity />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
