@@ -1,0 +1,32 @@
+@import 'reset.css';
+
+.todo-container {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.todo-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.todo-add {
+    max-width: 80%;
+    line-height: 2;
+    margin-right: 10px;
+}
+
+.todo-container .add-btn {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.todo-list li {
+    display: flex;
+}
