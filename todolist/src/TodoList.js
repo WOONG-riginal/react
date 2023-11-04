@@ -38,25 +38,18 @@ const TodoList = () => {
           <li
             key={index}
           >
-            <div style={{ display: "flex", alignItems: "center" }}>
+            <div className="todo-txt">
               <input
                 type="checkbox"
                 checked={todo.checked}
                 onChange={() => handleToggleTodo(index)}
               />
-              <span
-                style={{
-                  marginRight: "10px",
-                  textDecoration: todo.checked ? "line-through" : "none",
-                }}
-              >
+              {/* 할 일 완료 시 가로줄 긋기 */}
+              <p style={{textDecoration: todo.checked ? "line-through" : "none"}}>
                 {todo.text}
-              </span>
+              </p>
             </div>
-            <button
-              style={{ marginTop: "5px", marginBottom: "5px" }}
-              onClick={() => handleDeleteTodo(index)}
-            >
+            <button className="delete-btn" onClick={() => handleDeleteTodo(index)}>
               지우기
             </button>
           </li>

@@ -2,9 +2,10 @@
 
 .todo-container {
     width: 40%;
+    height: 800px;
     margin: 0 auto;
     margin-top: 40px;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #000;
     border-radius: 8px;
 }
@@ -12,13 +13,14 @@
 .todo-container h1 {
     font-size: 36px;
     font-weight: 700;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
 }
 
 .todo-add {
     max-width: 80%;
     line-height: 2;
     margin-right: 10px;
+    margin-bottom: 18px;
 }
 
 .todo-container .add-btn {
@@ -29,4 +31,26 @@
 
 .todo-list li {
     display: flex;
+}
+
+.todo-list .todo-txt {
+    display: flex;
+    align-items: center;
+}
+
+.todo-list .todo-txt input {
+    width: 20px;
+}
+
+.todo-list .todo-txt p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.delete-btn {
+    border: 1px solid #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    padding: 4px;
 }
