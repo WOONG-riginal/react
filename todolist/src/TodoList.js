@@ -45,9 +45,7 @@ const TodoList = () => {
                 onChange={() => handleToggleTodo(index)}
               />
               {/* 할 일 완료 시 가로줄 긋기 */}
-              <p style={{textDecoration: todo.checked ? "line-through" : "none"}}>
-                {todo.text}
-              </p>
+              <p>{todo.text}</p>
             </div>
             <button className="delete-btn" onClick={() => handleDeleteTodo(index)}>
               지우기
