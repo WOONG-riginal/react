@@ -1,9 +1,9 @@
-import ModalExample from './ModalExample';
+import WeatherMap from "./components/WeatherMap";
 
 function App() {
   return (
     <div className="App">
-      <ModalExample />
+      <WeatherMap />
     </div>
   );
 }
