@@ -62,7 +62,7 @@ function WeatherMap() {
 
         // 지도에 클릭 이벤트를 등록합니다
         // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
             
             // 클릭한 위도, 경도 정보를 가져옵니다 
             const latlng = mouseEvent.latLng; 
@@ -71,7 +71,7 @@ function WeatherMap() {
             marker.setPosition(latlng);                
             overlay.setPosition(latlng);
 
-            // 클릭한 위치의 위도는 latlng.getLat(), 경도는 latlng.getLng()로 추출    
+            // 클릭한 위치의 위도는 latlng.getLat(), 경도는 latlng.getLng()로 추출
         });
 
         // 마커에 마우스를 올렸을 때 오버레이를 표시합니다
