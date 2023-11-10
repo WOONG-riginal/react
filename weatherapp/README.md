@@ -1,5 +1,5 @@
 # 프로젝트 - 날씨 지도 앱 
-(23. 11. 9 ~ )
+(23. 11. 2 ~ )
 
 ## 목표
 
@@ -7,7 +7,7 @@
 
 ## 과정
 
-1. 카카오맵 API를 활용하여 지도에 마커 및 오버레이를 사용할 수 있도록 코딩 ([900_portfolio/300_WeatherMap](https://github.com/WOONG-riginal/front-end/tree/main/900_portfolio/300_WeatherMap))
+1. 카카오맵 API를 활용하여 지도에 마커 및 오버레이를 사용할 수 있도록 html 코딩 ([900_portfolio/300_WeatherMap](https://github.com/WOONG-riginal/front-end/tree/main/900_portfolio/300_WeatherMap))
    
    > 처음에는 마커를 각 도시마다 생성하는 것으로 구상 (대표적인 도시들마다 마커를 생성)
    
