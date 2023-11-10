@@ -128,7 +128,7 @@ function Weather() {
       } catch(error) {
   
     }});
-  },[areaValue, areakr]); // 의존관계 삽입 => data변경시 useEffect() 재실행 | [areaValuer=주소창 지역, areakr=한글표시 지역명= 아래 코딩해놓음]
+  },[areaValue, areakr]); // 의존관계 삽입 => data변경시 useEffect() 재실행 | [areaValue=주소창 지역, areakr=한글표시 지역명= 아래 코딩해놓음]
 
 /* #3.최초 렌더링 될 시, select 폼에 미리 작성해놓은 객체를 option으로 넣음! */
 /* areaGroup = 하단에 수퍼컴포넌트에서 지역정보 불러옴 */
