@@ -3,6 +3,10 @@ import './weathermap.css'
 const { kakao } = window;
 
 function WeatherMap() {
+
+    let lat;
+    let lng;
+
     useEffect( () => {
         const mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = { 
@@ -65,13 +69,16 @@ function WeatherMap() {
         kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
             
             // 클릭한 위도, 경도 정보를 가져옵니다 
-            const latlng = mouseEvent.latLng; 
+            const latlng = mouseEvent.latLng;
             
             // 마커와 오버레이의 위치를 클릭한 위치로 옮깁니다
             marker.setPosition(latlng);                
             overlay.setPosition(latlng);
 
             // 클릭한 위치의 위도는 latlng.getLat(), 경도는 latlng.getLng()로 추출
+            
+            lat = latlng.getLat();
+            lng = latlng.getLng();
         });
 
         // 마커에 마우스를 올렸을 때 오버레이를 표시합니다
@@ -84,7 +91,8 @@ function WeatherMap() {
     })
 
   return (
-    <div id="map" style={{width:'100%', height:'930px'}}></div>
+    <div id="map" style={{width:'100%', height:'930px'}}>
+    </div>
   )
 }
 
