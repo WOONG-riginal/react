@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# 프로젝트 - 날씨 지도 앱 
+(23. 11. 2 ~ )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 목표
 
-## Available Scripts
+지도 API(카카오맵)와 날씨 API(오픈웨더맵)를 활용해 지도에서 해당 지역의 날씨를 확인할 수 있는 앱 만들기
 
-In the project directory, you can run:
+## 과정
 
-### `npm start`
+1. 카카오맵 API를 활용하여 지도에 마커 및 오버레이를 사용할 수 있도록 html 코딩 ([900_portfolio/300_WeatherMap](https://github.com/WOONG-riginal/front-end/tree/main/900_portfolio/300_WeatherMap))
+   
+   > 처음에는 마커를 각 도시마다 생성하는 것으로 구상 (대표적인 도시들마다 마커를 생성)
+   
+   > 너무 많은 마커가 가독성을 해치는 것을 방지하기 위해 클릭하는 지역에만 마커를 생성하고, 날씨 정보를 출력하는 것으로 수정
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. html코드를 리액트로 변환
+   
+   > useEffect를 통해 스크립트 구현
+   
+3. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+?? 지도에서 얻어온 좌표를 통해 날씨 api를 요청해 와서 날씨 데이터를 활용하는 방법을 찾아보자
