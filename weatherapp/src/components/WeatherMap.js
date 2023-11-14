@@ -88,6 +88,11 @@ function WeatherMap() {
         kakao.maps.event.addListener(marker, 'mouseout', function() {
             overlay.setMap(null);
         });
+
+        // 날씨 api 사용하기 (fetch 활용?)
+        // fetch를 실행. 첫번째 인자 = 주소값, 두번째 인자 = 옵션값 넣어줌.
+        // 주소에 필요한 옵션 파라미터를 넣어줌. 여기서는 지역값과 api key를 넣었음. (?q="지역값"&appid="API key")
+        // then = fetch가 이루어지면 실행되는 함수로 => async와 await을 통해 데이터를 받을 수 있음.
     })
 
   return (
