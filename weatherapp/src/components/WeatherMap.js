@@ -4,6 +4,7 @@ const { kakao } = window;
 
 function WeatherMap() {
 
+    // 위도와 경도 변수 선언 -> 이후 지도 api를 통해 데이터를 가져다 사용
     let lat;
     let lng;
 
@@ -74,8 +75,10 @@ function WeatherMap() {
                 try {
                     const weatherData = await response.json();
 
+                    // 날씨 아이콘 지정
                     const icon = weatherData.weather[0].icon;
-                    // 클릭 이벤트 실행 시 오버레이 재구성
+
+                    // 클릭 이벤트 실행 시 생성할 오버레이 내 콘텐츠 구성
                     const weatherInfo = 
                     `
                         <div class="wrap">
