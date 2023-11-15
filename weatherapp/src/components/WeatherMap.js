@@ -112,7 +112,7 @@ function WeatherMap() {
 
         });
 
-        // 마커에 마우스를 올렸을 때 오버레이를 표시합니다
+        // 마커를 클릭했을 때 오버레이를 표시하고, 마커를 이동시키면 이전 오버레이는 없애기
         kakao.maps.event.addListener(marker, 'click', function() {
             overlay.setMap(map);
         });
