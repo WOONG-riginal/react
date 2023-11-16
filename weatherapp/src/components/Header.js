@@ -8,8 +8,7 @@ export default function Header() {
         <nav className="navbar">
             <ul>
                 <li>기상예보</li>
-                <li>지역으로 검색</li>
-                <li>지도에서 검색</li>
+                <li>상세검색</li>
             </ul>
         </nav>
     </header>

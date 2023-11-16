@@ -30,7 +30,6 @@ function WeatherMap() {
                         // 날씨 아이콘 지정
                         const icon = weatherData.weather[0].icon;
         
-                        // 클릭 이벤트 실행 시 생성할 오버레이 내 콘텐츠 구성
                         const weatherInfo = 
                         `
                             <div class="wrap">
@@ -40,7 +39,7 @@ function WeatherMap() {
                                         <div class="weatherImg">
                                             <img class="weatherImg" src="./images/weather/${weatherIcon[icon]}.png">
                                         </div>
-                                        <div class="weatherInfo">${(weatherData.main.temp).toFixed(1)}&deg;</div>
+                                        <div class="weatherInfo">${(weatherData.main.temp).toFixed(1)}&#8451;</div>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +50,9 @@ function WeatherMap() {
                             content: weatherInfo
                         });
     
+                        // 해당 좌표 지역에 날씨정보 생성
                         customOverlay.setMap(map);
+
                     } catch(error) {
         
                     }
@@ -63,10 +64,10 @@ function WeatherMap() {
         
     })
 
-  return (
-    <div id="map">
-    </div>
-  )
+    return (
+        <div id="map">
+        </div>
+    )
 }
 
 export default WeatherMap
