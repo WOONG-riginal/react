@@ -4,10 +4,6 @@ const { kakao } = window;
 
 function WeatherMap() {
 
-    // 위도와 경도 변수 선언 -> 이후 지도 api를 통해 데이터를 가져다 사용
-    let lat;
-    let lng;
-
     useEffect( () => {
         const mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = { 
@@ -19,107 +15,52 @@ function WeatherMap() {
         const map = new kakao.maps.Map(mapContainer, mapOption); 
 
         // 지도의 확대, 축소 레벨 제한 (10~12)
-        map.setMinLevel(10); map.setMaxLevel(12);
+        map.setMinLevel(11); map.setMaxLevel(12);
 
-        const imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png', // 마커이미지의 주소입니다    
-                imageSize = new kakao.maps.Size(24, 35), // 마커이미지의 크기입니다
-                imageOption = {offset: new kakao.maps.Point(12, 35)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-        const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
-        
-        // 지도를 클릭한 위치에 표출할 마커입니다
-        const marker = new kakao.maps.Marker({ 
-            // 지도 중심좌표에 마커를 생성합니다 
-            position: new kakao.maps.LatLng(37.5665, 126.9780),
-            image: markerImage // 마커이미지 설정
-        });
-        
-        // 오버레이 생성
-        // 이후 오버레이를 변경시켜야 하므로 const 대신 var 변수 선언
-        // const로 선언하더라도 변경시킬 수 있는 방법은 다시 고민해보겠음
-        var overlay = new kakao.maps.CustomOverlay({
-            content: ``,
-            position: marker.getPosition()
-        });
-
-        // 지도에 클릭 이벤트를 등록합니다
-        // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-            
-            // 지도에 마커를 표시합니다
-            marker.setMap(map);
-
-            // 클릭한 위도, 경도 정보를 가져옵니다 
-            const latlng = mouseEvent.latLng;
-            
-            // 마커와 오버레이의 위치를 클릭한 위치로 옮깁니다
-            marker.setPosition(latlng);                
-            overlay.setPosition(latlng);
-
-            // 클릭한 위치의 위도는 latlng.getLat(), 경도는 latlng.getLng()로 추출
-            lat = latlng.getLat();
-            lng = latlng.getLng();
-
-            // 날씨 api 사용하기 (fetch 활용?)
-            // GET method 사용
+        function makeWeatherWindow() {
             const init = {
                 method: "GET",
             };
-
-            // fetch를 실행. 첫번째 인자 = 주소값, 두번째 인자 = 옵션값
-            // 주소에 필요한 옵션 파라미터를 넣어줌. 여기서는 위도, 경도 좌표와 api key를 사용
-            // then = fetch가 이루어지면 실행되는 함수로 => async와 await을 통해 데이터를 받음
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
-            .then(async response => {
-                try {
-                    const weatherData = await response.json();
-
-                    // 날씨 아이콘 지정
-                    const icon = weatherData.weather[0].icon;
-
-                    // 클릭 이벤트 실행 시 생성할 오버레이 내 콘텐츠 구성
-                    const weatherInfo = 
-                    `
-                        <div class="wrap">
-                            <div class="info">
-                                <div class="title">${weatherData.name}</div>
-                                <div class="weather">
-                                    <div class="weatherImg">
-                                    <img class="weatherImg" src="./images/weather/${weatherIcon[icon]}.png">
+            cityList.forEach( data =>
+                fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lng}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
+                .then(async response => {
+                    try {
+                        const weatherData = await response.json();
+        
+                        // 날씨 아이콘 지정
+                        const icon = weatherData.weather[0].icon;
+        
+                        // 클릭 이벤트 실행 시 생성할 오버레이 내 콘텐츠 구성
+                        const weatherInfo = 
+                        `
+                            <div class="wrap">
+                                <div class="info">
+                                    <div class="title">${data.city}</div>
+                                    <div class="weather">
+                                        <div class="weatherImg">
+                                            <img class="weatherImg" src="./images/weather/${weatherIcon[icon]}.png">
+                                        </div>
+                                        <div class="weatherInfo">${(weatherData.main.temp).toFixed(1)}&deg;</div>
                                     </div>
-                                    <ul class="weatherInfo">
-                                        <li>현재기온 : ${(weatherData.main.temp).toFixed(1)}&deg;</li>
-                                        <li>최고기온 : ${(weatherData.main.temp_max).toFixed(1)}&deg;</li>
-                                        <li>최저기온 : ${(weatherData.main.temp_min).toFixed(1)}&deg;</li>
-                                        <li>체감온도 : ${(weatherData.main.feels_like).toFixed(1)}&deg;</li>
-                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                    `
+                        `
+                        var customOverlay = new kakao.maps.CustomOverlay({
+                            map: map,
+                            position: new kakao.maps.LatLng(data.lat, data.lng),
+                            content: weatherInfo
+                        });
+    
+                        customOverlay.setMap(map);
+                    } catch(error) {
         
-                    overlay = new kakao.maps.CustomOverlay({
-                        content: weatherInfo,
-                        position: marker.getPosition()
-                    });
+                    }
+                })
 
-                } catch(error) {
-
-                }
-            })
-
-
-        });
-
-        // 마커를 클릭했을 때 오버레이를 표시하고, 마커를 이동시키면 이전 오버레이는 없애기
-        kakao.maps.event.addListener(marker, 'click', function() {
-            overlay.setMap(map);
-        });
-        kakao.maps.event.addListener(map, 'click', function() {
-            overlay.setMap(null);
-        });
-
+            )
+        }
+        makeWeatherWindow();
+        
     })
 
   return (
@@ -129,6 +70,195 @@ function WeatherMap() {
 }
 
 export default WeatherMap
+
+const cityList = [
+    {
+        id: 0,
+        city: '서울',
+        lat:'37.5642135',
+        lng:'127.0016985',
+    },{
+        id: 1,
+        city: '부산',
+        lat:'35.1799222',
+        lng:'129.05562775',
+    },{
+        id: 2,
+        city: '인천',
+        lat:'37.4562557',
+        lng:'126.7052062',
+    },{
+        id: 3,
+        city: '대구',
+        lat:'35.8714354',
+        lng:'128.601445',
+    },{
+        id: 4,
+        city: '대전',
+        lat:'36.3504119',
+        lng:'127.3745475',
+    },{
+        id: 5,
+        city: '광주',
+        lat:'35.1595454',
+        lng:'126.8526012',
+    },{
+        id: 6,
+        city: '울산',
+        lat:'35.5383773',
+        lng:'129.3113596',
+    },{
+        id: 7,
+        city: '백령도',
+        lat:'37.9699252',
+        lng:'124.7195135',
+    },{
+        id: 8,
+        city: '춘천',
+        lat:'37.8613153',
+        lng:'127.7299707',
+    },{
+        id: 9,
+        city: '강릉',
+        lat:'37.751853',
+        lng:'128.8760574',
+    },{
+        id: 10,
+        city: '속초',
+        lat:'38.2070148',
+        lng:'128.5918488',
+    },{
+        id: 11,
+        city: '울릉도',
+        lat:'37.50000',
+        lng:'130.86667',
+    },{
+        id: 12,
+        city: '독도',
+        lat:'37.240778',
+        lng:'131.869556',
+    },{
+        id: 13,
+        city: '청주',
+        lat:'36.6424341',
+        lng:'127.4890319',
+    },{
+        id: 14,
+        city: '서산',
+        lat:'36.7844993',
+        lng:'126.4503169',
+    },{
+        id: 15,
+        city: '당진',
+        lat:'36.8936109',
+        lng:'126.6283278',
+    },{
+        id: 16,
+        city: '전주',
+        lat:'35.8242238',
+        lng:'127.1479532',
+    },{
+        id: 17,
+        city: '안동',
+        lat:'36.5683543',
+        lng:'128.729357',
+    },{
+        id: 18,
+        city: '목포',
+        lat:'34.8118351',
+        lng:'126.3921664',
+    },{
+        id: 19,
+        city: '제주',
+        lat:'33.4996213',
+        lng:'126.5311884',
+    },{
+        id: 20,
+        city: '여수',
+        lat:'34.7603737',
+        lng:'127.6622221',
+    },{
+        id: 21,
+        city: '창원',
+        lat:'35.2538433',
+        lng:'128.6402609',
+    },{
+        id: 22,
+        city: '포항',
+        lat:'36.0190178',
+        lng:'129.3434808',
+    },{
+        id: 23,
+        city: '파주',
+        lat:'37.7598688',
+        lng:'126.7801781',
+    },{
+        id: 24,
+        city: '강화',
+        lat:'37.700',
+        lng:'126.433 ',
+    },{
+        id: 25,
+        city: '철원',
+        lat:'38.146609',
+        lng:'127.3132256',
+    },{
+        id: 26,
+        city: '원주',
+        lat:'37.3422186',
+        lng:'127.9201621',
+    },{
+        id: 27,
+        city: '태백',
+        lat:'37.1640654',
+        lng:'128.9855649',
+    },{
+        id: 28,
+        city: '문경',
+        lat:'36.586148',
+        lng:'128.1867972',
+    },{
+        id: 29,
+        city: '순천',
+        lat:'34.950637',
+        lng:'127.4872135',
+    },{
+        id: 30,
+        city: '완도',
+        lat:'34.3110596',
+        lng:'126.7550541',
+    },{
+        id: 31,
+        city: '세종',
+        lat:'36.4800000',
+        lng:'127.2744855',
+    },{
+        id: 32,
+        city: '서귀포',
+        lat:'33.2581205',
+        lng:'126.510076',
+    },{
+        id: 33,
+        city: '용인',
+        lat:'37.2410864',
+        lng:'127.1975537',
+    },{
+        id: 34,
+        city: '이천',
+        lat:'37.2719952',
+        lng:'127.4348221',
+    },{
+        id: 35,
+        city: '충주',
+        lat:'36.9910113',
+        lng:'127.9259497',
+    },{
+        id: 36,
+        city: '군산',
+        lat:'35.9688772',
+        lng:'126.6866293',
+    }
+]
 
 const weatherIcon = {
     // 맑음 (clear sky)
