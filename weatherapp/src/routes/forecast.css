@@ -1,0 +1,64 @@
+.forecast-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #213d57;
+    margin: 30px 0;
+}
+table, td, th {
+    border-collapse: collapse;
+}
+thead {
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+}
+.container {
+    width: 90%; height: 90vh; margin: 16px auto 0;
+}
+.forecast-contents {
+    border-left: none;
+    border-right: none;
+}
+.forecast-contents th {
+    border-right: 1px solid #ddd;
+    width: 80px;
+    padding: 10px 0;
+}
+.forecast-contents th:last-child {
+    border-right: none;
+}
+.forecast-contents th {
+    font-size: 14px;
+}
+.forecast-contents .date th {
+    font-weight: bold;
+    color: orangered;
+}
+.forecast-contents th.area-name {
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: bold;
+    border-left: none;
+    color: #000;
+}
+.forecast-contents tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+.forecast-contents tbody tr:nth-child(2n) {
+    background-color: #eee;
+}
+.forecast-contents td {
+    border-right: 1px solid #ddd;
+    width: 80px;
+    height: 70px;
+    font-size: 14px;
+    line-height: 1.2;
+    vertical-align: middle;
+    text-align: center;
+}
+.forecast-contents td:last-child {
+    border: none;
+}
+.forecast-contents td img {
+    width: 32px;
+    margin-bottom: 4px;
+}

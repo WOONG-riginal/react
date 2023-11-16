@@ -1,4 +1,5 @@
 @import url(./reset.css);
+
 header {
     color: #fff;
     background-color: #009ae1;
@@ -13,8 +14,8 @@ header {
     cursor: pointer;
 }
 .logo img {
-    width: 30px;
-    margin: 15px 15px 0 0;
+    width: 40px;
+    margin: 15px 10px 0 0;
 }
 .navbar ul {
     margin-left: 40px;
