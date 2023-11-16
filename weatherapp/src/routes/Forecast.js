@@ -58,27 +58,27 @@ function Forecast() {
         <tbody>
           <tr>
             <td>서울<br/>인천<br/>경기</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" /><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
           </tr>
           <tr>
             <td>강원<br/>영서</td>
