@@ -70,7 +70,7 @@ function WeatherMap() {
             // fetch를 실행. 첫번째 인자 = 주소값, 두번째 인자 = 옵션값
             // 주소에 필요한 옵션 파라미터를 넣어줌. 여기서는 위도, 경도 좌표와 api key를 사용
             // then = fetch가 이루어지면 실행되는 함수로 => async와 await을 통해 데이터를 받음
-            fetch('https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lng+'&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455', init)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
             .then(async response => {
                 try {
                     const weatherData = await response.json();
@@ -125,7 +125,7 @@ function WeatherMap() {
     })
 
   return (
-    <div id="map" style={{width:'100%', height:'930px'}}>
+    <div id="map" style={{width:'100%', height:'870px'}}>
     </div>
   )
 }

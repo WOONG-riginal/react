@@ -1,0 +1,26 @@
+@import url(./reset.css);
+header {
+    color: #fff;
+    background-color: #009ae1;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+}
+.logo {
+    margin-left: 40px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.logo img {
+    width: 30px;
+    margin: 15px 15px 0 0;
+}
+.navbar ul {
+    margin-left: 40px;
+    display: flex;
+}
+.navbar ul li {
+    margin-right: 30px;
+    cursor: pointer;
+}
