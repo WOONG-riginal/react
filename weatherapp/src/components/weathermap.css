@@ -1,4 +1,7 @@
 @import url(./reset.css);
+
+#map {width: 90%; height: 90vh; margin: 16px auto 0; border: 1px solid #000;}
+
 .wrap {position: absolute;left: 0;bottom: 40px;width: 208px;height: 116px;margin-left: -104px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
 .wrap * {padding: 0;margin: 0;}
 .wrap .info {width: 206px;height: 114px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
@@ -6,5 +9,5 @@
 .info .title {height: 30px;line-height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 16px;font-weight: bold;text-align: center;}
 .info .weather {position: relative;overflow: hidden;}
 .info .weatherImg {position: absolute;top: 6px;left: 16px;z-index: 99;width: 73px;height: 71px;border: none;overflow: hidden;}
-.info .weatherImg img {width: 100%; height: 100%;}
+.info .weatherImg img {position: absolute;left: 0;top: 0;width: 100%;}
 .info .weatherInfo {position: relative;margin: 6px 0 0 108px;height: 78px;}

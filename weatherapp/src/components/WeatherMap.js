@@ -119,13 +119,11 @@ function WeatherMap() {
         kakao.maps.event.addListener(map, 'click', function() {
             overlay.setMap(null);
         });
-        
-        
 
     })
 
   return (
-    <div id="map" style={{width:'100%', height:'870px'}}>
+    <div id="map">
     </div>
   )
 }

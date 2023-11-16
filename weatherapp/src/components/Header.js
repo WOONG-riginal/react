@@ -7,8 +7,9 @@ export default function Header() {
         <h1 className="logo"><img src="https://cdn-icons-png.flaticon.com/512/3721/3721881.png" alt="로고" />WEATHER APP</h1>
         <nav className="navbar">
             <ul>
-                <li>지역검색</li>
                 <li>기상예보</li>
+                <li>지역으로 검색</li>
+                <li>지도에서 검색</li>
             </ul>
         </nav>
     </header>
