@@ -1,7 +1,46 @@
 import React from 'react'
 import './forecast.css'
+import { weatherIcon } from '../DataList'
 
 function Forecast() {
+  
+  function setForecastData($areaName) {
+    const init = {
+        method: "GET",
+    };
+
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${$areaName}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
+    .then(async response => {
+        try {
+          const forecastData = await response.json();
+          
+          let temp_date = '';
+
+          for (let i=0; i <= 20; i++) {
+            if (temp_date !== forecastData.list[i].dt_txt.substr(0,10)) {
+              // console.log(forecastData.list[i].dt_txt.substr(0,10));
+              
+              temp_date = forecastData.list[i].dt_txt.substr(0,10);
+
+              let tableData = `<th>${forecastData.list[i].dt_txt.substr(0,10)}</th>`;
+              // return tableData;
+              console.log(tableData);
+            } else {
+              // console.log('none');
+              
+              let tableData = `<th></th>`;
+              // return tableData;
+              console.log(tableData);
+            }
+          }
+          // console.log(forecastData.list[10].dt_txt.substr(0,10));
+        } catch(error) {
+
+        }
+    })
+  }
+  setForecastData('Seoul');
+  
   return (
     <div className='container'>
       <h2 className='forecast-title'>전국 기상예보</h2>
@@ -9,7 +48,7 @@ function Forecast() {
         <thead>
           <tr className='date'>
             <th className='area-name' rowSpan={'2'}>지역</th>
-            <th>18일</th>
+            <th>오늘</th>
             <th></th>
             <th></th>
             <th></th>
@@ -17,7 +56,7 @@ function Forecast() {
             <th></th>
             <th></th>
             <th></th>
-            <th>19일</th>
+            <th>내일</th>
             <th></th>
             <th></th>
             <th></th>
@@ -25,11 +64,12 @@ function Forecast() {
             <th></th>
             <th></th>
             <th></th>
-            <th>20일</th>
+            <th>모레</th>
             <th></th>
             <th></th>
             <th></th>
             <th></th>
+            {/* {setForecastData('Seoul')} */}
           </tr>
           <tr className='time'>
             <th>00:00</th>
