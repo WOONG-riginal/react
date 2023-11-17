@@ -53,7 +53,6 @@ function WeatherMap() {
     
                         // 해당 좌표 지역에 날씨정보 생성
                         customOverlay.setMap(map);
-
                     } catch(error) {
         
                     }
