@@ -1,6 +1,6 @@
 import React from 'react'
 import './forecast.css'
-import { weatherIcon } from '../DataList'
+// import { weatherIcon } from '../DataList'
 
 function Forecast() {
   
