@@ -4,41 +4,6 @@ import './forecast.css'
 
 function Forecast() {
   
-  function setForecastData($areaName) {
-    const init = {
-        method: "GET",
-    };
-
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${$areaName}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
-    .then(async response => {
-        try {
-          const forecastData = await response.json();
-          
-          let temp_date = '';
-
-          for (let i=0; i <= 20; i++) {
-            if (temp_date !== forecastData.list[i].dt_txt.substr(0,10)) {
-              
-              temp_date = forecastData.list[i].dt_txt.substr(0,10);
-
-              let tableData = `<th>${forecastData.list[i].dt_txt.substr(0,10)}</th>`;
-              // return tableData;
-              console.log(tableData);
-            } else {
-              
-              let tableData = `<th></th>`;
-              // return tableData;
-              console.log(tableData);
-            }
-          }
-
-        } catch(error) {
-
-        }
-    })
-  }
-  setForecastData('Seoul');
-  
   return (
     <div className='container'>
       <h2 className='forecast-title'>전국 기상예보</h2>
@@ -96,27 +61,7 @@ function Forecast() {
         <tbody>
           <tr>
             <td>서울<br/>인천<br/>경기</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            <td><img className="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
           </tr>
           <tr>
             <td>강원<br/>영서</td>

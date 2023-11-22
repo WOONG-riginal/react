@@ -1,6 +1,6 @@
 import React from 'react'
 import './forecast.css'
-import { weatherIcon } from '../DataList'
+// import { weatherIcon } from '../DataList'
 
 function Forecast() {
   
@@ -18,7 +18,6 @@ function Forecast() {
 
           for (let i=0; i <= 20; i++) {
             if (temp_date !== forecastData.list[i].dt_txt.substr(0,10)) {
-              // console.log(forecastData.list[i].dt_txt.substr(0,10));
               
               temp_date = forecastData.list[i].dt_txt.substr(0,10);
 
@@ -26,14 +25,13 @@ function Forecast() {
               // return tableData;
               console.log(tableData);
             } else {
-              // console.log('none');
               
               let tableData = `<th></th>`;
               // return tableData;
               console.log(tableData);
             }
           }
-          // console.log(forecastData.list[10].dt_txt.substr(0,10));
+
         } catch(error) {
 
         }
