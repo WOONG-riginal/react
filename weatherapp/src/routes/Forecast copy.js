@@ -1,44 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './forecast.css'
 // import { weatherIcon } from '../DataList'
 
 function Forecast() {
+  useEffect(() => {
+
+    function setForecastTime($areaName) {
+      const init = {
+          method: "GET",
+      };
   
-  function setForecastData($areaName) {
-    const init = {
-        method: "GET",
-    };
-
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${$areaName}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
-    .then(async response => {
-        try {
-          const forecastData = await response.json();
-          
-          let temp_date = '';
-
-          for (let i=0; i <= 20; i++) {
-            if (temp_date !== forecastData.list[i].dt_txt.substr(0,10)) {
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${$areaName}&units=metric&appid=f47b7f358e7e20494119bb7bcc6b2455`, init)
+      .then(async response => {
+          try {
+            const forecastData = await response.json();
+            console.log(forecastData);
+            
+            let temp_date = '';
+            let tableData = '';
+            for(let i=0; i<=20; i++){
+              if (temp_date !== forecastData.list[i].dt_txt.substr(0,10)) {
               
-              temp_date = forecastData.list[i].dt_txt.substr(0,10);
-
-              let tableData = `<th>${forecastData.list[i].dt_txt.substr(0,10)}</th>`;
-              // return tableData;
-              console.log(tableData);
-            } else {
-              
-              let tableData = `<th></th>`;
-              // return tableData;
-              console.log(tableData);
+                temp_date = forecastData.list[i].dt_txt.substr(0,10);
+  
+                tableData = `<th>${forecastData.list[i].dt_txt.substr(0,10)}</th>`;
+                // return tableData;
+                console.log(tableData);
+              } else {
+                
+                tableData = `<th></th>`;
+                // return tableData;
+                console.log(tableData);
+              }
             }
+            return tableData;
+            
+          } catch(error) {
+            
           }
+      })
+    }
+    setForecastTime('Seoul');
 
-        } catch(error) {
+  }, [])
 
-        }
-    })
-  }
-  setForecastData('Seoul');
-  
+
   return (
     <div className='container'>
       <h2 className='forecast-title'>전국 기상예보</h2>
@@ -67,7 +73,6 @@ function Forecast() {
             <th></th>
             <th></th>
             <th></th>
-            {/* {setForecastData('Seoul')} */}
           </tr>
           <tr className='time'>
             <th>00:00</th>
@@ -96,27 +101,13 @@ function Forecast() {
         <tbody>
           <tr>
             <td>서울<br/>인천<br/>경기</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
-            <td><img class="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>
+            {(() => {
+              const arr = [];
+              for(var i=0; i<21; i++){
+                arr.push(<td><img className="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/><br/>3.5&#8451;</td>)
+              }
+              return arr;
+            })()}
           </tr>
           <tr>
             <td>강원<br/>영서</td>
