@@ -27,6 +27,7 @@ function WeatherMap() {
                 .then(async response => {
                     try {
                         const weatherData = await response.json();
+                        // console.log(weatherData);
         
                         // 날씨 아이콘 지정
                         const icon = weatherData.weather[0].icon;
@@ -40,7 +41,7 @@ function WeatherMap() {
                                         <div class="weatherImg">
                                             <img class="weatherImg" src="./images/weather/${weatherIcon[icon]}.png">
                                         </div>
-                                        <div class="weatherInfo">${(weatherData.main.temp).toFixed(1)}&#8451;</div>
+                                        <div class="weatherInfo">${(weatherData.main.temp).toFixed()}&#8451;</div>
                                     </div>
                                 </div>
                             </div>

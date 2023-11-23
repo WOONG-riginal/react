@@ -2,8 +2,8 @@ export const cityList = [
     {
         id: 0,
         city: '서울',
-        lat:'37.5642135',
-        lng:'127.0016985',
+        lat:'37.5683',
+        lng:'126.9778',
     },{
         id: 1,
         city: '부산',
@@ -187,6 +187,50 @@ export const cityList = [
     }
 ]
 
+export const areaList = [
+    {
+        id: 0,
+        area: '서울<br/>인천<br/>경기',
+        name: 'Seoul',
+    },{
+        id: 1,
+        area: '강원<br/>영서',
+        name: 'Chuncheon',
+    },{
+        id: 2,
+        area: '강원<br/>영동',
+        name: 'Gangneung',
+    },{
+        id: 3,
+        area: '대전<br/>세종<br/>충남',
+        name: 'Daejeon',
+    },{
+        id: 4,
+        area: '충북',
+        name: 'Cheongju-si',
+    },{
+        id: 5,
+        area: '광주<br/>전남',
+        name: 'Gwangju',
+    },{
+        id: 6,
+        area: '전북',
+        name: 'Jeonju',
+    },{
+        id: 7,
+        area: '부산<br/>울산<br/>경남',
+        name: 'Busan',
+    },{
+        id: 8,
+        area: '대구<br/>경북',
+        name: 'Daegu',
+    },{
+        id: 9,
+        area: '제주',
+        name: 'Jeju City',
+    },
+]
+
 export const weatherIcon = {
     // 맑음 (clear sky)
     '01d' : '01d',
@@ -213,6 +257,6 @@ export const weatherIcon = {
     '13d' : '13d',
     '13n' : '13d',
     // 안개 (mist)
-    '50d' : '50d',
-    '50n' : '50d',
+    '50d' : '02d',
+    '50n' : '02n',
   }
