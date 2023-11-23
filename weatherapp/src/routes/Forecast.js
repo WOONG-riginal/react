@@ -16,7 +16,6 @@ function Forecast() {
     .then(async result => {
       try {
         const forecastData = await result.json();
-        // console.log(forecastData);
 
         function setDateTable(){
           let valueDate = '';
@@ -44,7 +43,7 @@ function Forecast() {
         timeTable.innerHTML = setTimeTable();
 
       } catch(error) {
-
+        console.log('forecastData 에러');
       }});
   }, [])
 
@@ -77,7 +76,7 @@ function Forecast() {
           areaTable[k].innerHTML = setAreaTable();
           
         } catch(error) {
-          
+          console.log('forecastData 에러');
         }}
       )
     }

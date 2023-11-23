@@ -11,6 +11,7 @@ function SearchArea() {
       setKeyword(e.target.value)
     }
   };
+  
   const clickSearchBtn = () => {
     setKeyword(document.getElementById('input-area').value)
   }
@@ -24,6 +25,12 @@ function SearchArea() {
     .then(async result => {
       try {
         const weatherData = await result.json();
+        
+        if(weatherData.cod === '400') {
+          alert('날씨가 궁금한 지역을 검색하세요.')
+        }else if(weatherData.cod === '404') {
+          alert('지역명을 정확하게 입력하세요.')
+        }
 
         const weatherContents = document.querySelector('.weather-contents');
 
@@ -39,7 +46,7 @@ function SearchArea() {
         weatherContents.innerHTML = contents;
 
       } catch(error) {
-
+        console.log('weatherData 에러');
       }})
 
   },[keyword])
@@ -99,7 +106,7 @@ function SearchArea() {
         areaTable.innerHTML = setAreaTable();
 
       } catch(error) {
-
+        console.log('forecastData 에러');
       }})
 
   },[keyword])

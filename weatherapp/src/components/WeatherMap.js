@@ -27,7 +27,6 @@ function WeatherMap() {
                 .then(async response => {
                     try {
                         const weatherData = await response.json();
-                        // console.log(weatherData);
         
                         // 날씨 아이콘 지정
                         const icon = weatherData.weather[0].icon;
@@ -55,7 +54,7 @@ function WeatherMap() {
                         // 해당 좌표 지역에 날씨정보 생성
                         customOverlay.setMap(map);
                     } catch(error) {
-        
+                        console.log('weatherData 에러');
                     }
                 })
             )
