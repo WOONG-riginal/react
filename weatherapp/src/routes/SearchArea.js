@@ -4,7 +4,16 @@ import { weatherIcon } from '../DataList'
 
 function SearchArea() {
 
-  const [keyword, setKeyword] = useState('Seoul');
+  const [keyword, setKeyword] = useState('');
+
+  const inputArea = (e) => {
+    if (e.key === 'Enter') {
+      setKeyword(e.target.value)
+    }
+  };
+  const clickSearchBtn = () => {
+    setKeyword(document.getElementById('input-area').value)
+  }
   
   useEffect(() => {
     const init = {
@@ -20,12 +29,12 @@ function SearchArea() {
 
         const contents = 
         `
-          <h2 class='area-name'>${keyword}</h2>
+          <h2 class='area-name'>${weatherData.name}</h2>
           <h3 class="weather-now"><img class="weatherImg" src="./images/weather/${weatherIcon[weatherData.weather[0].icon]}.png" alt='이모티콘'/></h3>
-          <p class="temp-now"><span class="main-temp">${weatherData.main.temp}&#8451;</span> 체감(${weatherData.main.feels_like}&#8451;)</p>
-          <p class="temp-low-high">최저 <span class="temp-low">${weatherData.main.temp_min}&#8451;</span> | 최고 <span class="temp-high">${weatherData.main.temp_max}&#8451;</span></p>
-          <p class="weather-info">습도 ${weatherData.main.humidity}% | 바람 ${weatherData.wind.deg}&deg; ${weatherData.wind.speed}m/s | 1시간강수량 -mm</p>
-          <p class="sunrise-sunset">일출 ${new Date(weatherData.sys.sunrise * 1000).getHours()}:${new Date(weatherData.sys.sunrise * 1000).getMinutes()} | 일몰 ${new Date(weatherData.sys.sunset * 1000).getHours()}:${new Date(weatherData.sys.sunset * 1000).getMinutes()}</p>
+          <p class="temp-now"><span class="main-temp">${weatherData.main.temp.toFixed(1)}&#8451;</span> 체감(${weatherData.main.feels_like.toFixed(1)}&#8451;)</p>
+          <p class="temp-low-high">최저 <span class="temp-low">${weatherData.main.temp_min.toFixed(1)}&#8451;</span> | 최고 <span class="temp-high">${weatherData.main.temp_max.toFixed(1)}&#8451;</span></p>
+          <p class="weather-info">습도 ${weatherData.main.humidity}% | 바람 ${weatherData.wind.speed}m/s</p>
+          <p class="sunrise-sunset">일출 ${new Date(weatherData.sys.sunrise * 1000).getHours()}시 ${new Date(weatherData.sys.sunrise * 1000).getMinutes()}분 | 일몰 ${new Date(weatherData.sys.sunset * 1000).getHours()}시 ${new Date(weatherData.sys.sunset * 1000).getMinutes()}분</p>
         `
         weatherContents.innerHTML = contents;
 
@@ -72,7 +81,7 @@ function SearchArea() {
         }
 
         function setAreaTable(){
-          let tableData = `<tr><td>${keyword}</td>`;
+          let tableData = `<tr><td>${forecastData.city.name}</td>`;
           for(let i=0; i<=20; i++){
             tableData += 
               `<td>
@@ -99,17 +108,10 @@ function SearchArea() {
   return (
     <div className="container">
         <div className='search-container'>
-            <input id="input-area" type="text" placeholder='지역명을 영문으로 입력하세요. (ex. Seoul)' />
-            <button><i className="fa fa-search" aria-hidden="true"></i></button>
+            <input id="input-area" type="text" placeholder='지역명을 영문으로 입력하세요. (ex. Seoul)' onKeyDown={inputArea} />
+            <button onClick={clickSearchBtn}><i className="fa fa-search" aria-hidden="true"></i></button>
         </div>
-        <div className="weather-contents">
-            <h2 className='area-name'>서울</h2>
-            <h3 className="weather-now"><img className="weatherImg" src="./images/weather/01d.png" alt='이모티콘'/></h3>
-            <p className="temp-now"><span className="main-temp">3.5&#8451;</span> 체감(3.0&#8451;)</p>
-            <p className="temp-low-high">최저 <span className="temp-low">2.0&#8451;</span> | 최고 <span className="temp-high">4.5&#8451;</span></p>
-            <p className="weather-info">습도 50% | 바람 남동 0.5m/s | 1시간강수량 -mm</p>
-            <p className="sunrise-sunset">일출 07:00 | 일몰 17:00</p>
-        </div>
+        <div className="weather-contents"></div>
         <table className='forecast-contents'>
             <thead>
               <tr className='date'></tr>
